@@ -1,22 +1,11 @@
-function ApiService() {
-
+function ApiService($http) {
+	this.$http = $http;
 }
 ApiService.prototype.getTags = function() {
-	$.ajax({
-  		url:'http://www.gifbase.com/js/tags.JSON',
-  		type:'GET',
-  		data:{},
+	return this.$http.get('http://www.gifbase.com/js/tags.json', {}).then(function(response) {
+		console.log(response);
 	})
-	.then(function(data){
-  		//success promise
-  		console.log(data);
-	},
-	function(data){
-		//failure promise
-		console.log(data);
-	})
-	// .always(function(data){
-	// 	//code to run whether function is success or error
-	});
 
 }
+
+angular.module('gifApp').service('ApiService', ApiService);
