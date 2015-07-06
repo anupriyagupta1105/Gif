@@ -1,2 +1,5 @@
+<h4>Search</h4>
+    
+    <input type="text" ng-model="selected" typeahead="Tag for Tag in ctrl.tags | filter:$viewValue | limitTo:8" class="form-control">
 
 <button ng-click="ctrl.service.getTags()">get Tags</button>
