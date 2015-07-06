@@ -1,15 +1,26 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<script src="js/angular.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.0/angular.js"></script>
+	<script src="js/angular-route.min.js"></script>
 	<script src="js/ui-bootstrap-tpls-0.13.0.min.js"></script>
+
+	<!-- THIS MUST BE FIRST -->
 	<script src="js/app.js"></script>
+
+	<!-- Controllers -->
+	<script src="Controllers/detailsCtrl.js"></script>
+	<script src="Controllers/searchCtrl.js"></script>
+	<!-- Templates -->
+	<script src="templates/search.html"></script>
+	<script src="templates/details.html"></script>
+
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
 	<link rel="stylesheet" href="styles.css">
 	<title></title>
 </head>
 <body>
-	<body ng-app="GifApp">
+	<body ng-app="gifApp">
 
 	<div class="container">
 		<ng-view></ng-view>
