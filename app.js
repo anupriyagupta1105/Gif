@@ -11,3 +11,4 @@ app.config(function($routeProvidder){
 			controller: 'detailsCtrl as ctrl'
 		})
 }
+
