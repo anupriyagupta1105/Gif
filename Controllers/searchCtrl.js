@@ -1,4 +1,4 @@
-function SearchCtrl(ApiService) {
+function SearchCtrl(ApiService, $location) {
 	var self = this;
 	this.apiService = ApiService;
 	self.gifData
@@ -18,4 +18,6 @@ SearchCtrl.prototype.onSelect = function ($item, $model, $label) {
     	console.log(data);
     });
 };
+SearchCtrl.prototype.goToDetails = function (gifID)
+
 angular.module('gifApp').controller('SearchCtrl', SearchCtrl);
